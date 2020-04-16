@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@{ 
+    if (ViewBag.Result==true)
+    {
+        <h5>@(Resources.Messages.Messege)</h5>
+    }
+}
+@Html.ActionLink(linkText: Resources.Buttons.Create, actionName: "Create", controllerName: "Home", routeValues: new { Area = "MultiLanguage" }, htmlAttributes: new { @class = "navbar-brand" })

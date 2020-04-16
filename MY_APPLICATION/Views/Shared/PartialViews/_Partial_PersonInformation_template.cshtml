@@ -1,0 +1,45 @@
+﻿@model ViewModels.Learn07ViewModel
+
+<div>
+    <h4>Learn07ViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+          @Html.DisplayFor(model=> model.Name)           
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.Partial(partialViewName:MVC.Shared.Views.PartialViews._Partial_PersianCalender)
+    <br />
+    @Html.ActionLink("Back to List", "Index")
+</p>

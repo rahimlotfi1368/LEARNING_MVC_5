@@ -1,0 +1,78 @@
+﻿@{
+    Layout = MVC.Shared.Views.Layouts._DefaultLayout;
+
+    // <summary>
+    // Step (3)
+    // </summary>   
+    //Layout = MVC.Shared.Views.Layouts._Layout02;
+
+    //نحوه خواندن از ویوبگ در ویوستارت
+    string temp = ViewContext.ViewBag.SomeVariable1;
+
+    //نحوه تعریف  ویوبگ در ویوستارت
+    ViewContext.ViewBag.SomeVariable2 = "Some Variable 2";
+
+    //***********************************************************
+    System.DateTime now = System.DateTime.Now;
+
+    var dayState = string.Empty;
+    if (now.Hour<10 && now.Hour>0)
+    {
+        dayState = "morning";
+    }
+
+    if (now.Hour < 16 && now.Hour > 10)
+    {
+        dayState = "noon";
+    }
+
+    if (now.Hour < 20 && now.Hour > 16)
+    {
+        dayState = "afternoon";
+    }
+
+    if (now.Hour < 24 && now.Hour > 20)
+    {
+        dayState = "night";
+    }
+    //Classic style of switch
+    switch (dayState)
+    {
+        case ("morning"):
+            {
+                Layout = MVC.Shared.Views.Layouts._Layout_Morning;
+                break;
+            }
+        case ("noon"):
+            {
+                Layout = MVC.Shared.Views.Layouts._Layout_Noon;
+                break;
+            }
+        case ("afternoon"):
+            {
+                Layout = MVC.Shared.Views.Layouts._Layout_Afternoon;
+                break;
+            }
+        case ("night"):
+            {
+                Layout = MVC.Shared.Views.Layouts._Layout_Night;
+                break;
+            }
+        default:
+            break;
+    }
+    //new form for switch
+    //var state = dayState switch
+    //{
+    //    "morning" => Layout = MVC.Shared.Views.Layouts._Layout_Morning,
+
+    //    "noon"=> Layout = MVC.Shared.Views.Layouts._Layout_Noon,
+
+    //    "afternoon"=> Layout = MVC.Shared.Views.Layouts._Layout_Afternoon,
+
+    //    "night"=> Layout = MVC.Shared.Views.Layouts._Layout_Night,
+
+    //    _=> Layout = MVC.Shared.Views.Layouts._DefaultLayout,
+    //};
+
+}

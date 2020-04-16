@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "N";
+}
+
+<h5>This is N view in M Controler in Area_3</h5>
+@Html.ActionLink(linkText: "Go to List in Home controller in Area_2", actionName: "List", controllerName: "Home", routeValues: new { Area = "Area_2" }, htmlAttributes: new { @class = "navbar-brand" })
+|
+@Html.ActionLink(linkText: "Go to List in User controller in Area_1", actionName: "List", controllerName: "User", routeValues: new { Area = "Area_1" }, htmlAttributes: new { @class = "navbar-brand" })

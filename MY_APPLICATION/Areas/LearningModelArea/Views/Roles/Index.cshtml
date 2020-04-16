@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Models.Role>
+
+@{
+    string title = "Role List";
+    ViewBag.Title = title;
+}
+
+    <h2>
+        @(title)
+    </h2>
+
+<div class="row">
+    <div class="col-12">
+        @Html.ActionLink(linkText: "Go TO User Manager", actionName: "Index", controllerName: "Users", routeValues: new { Area = "LearningModelArea" }, htmlAttributes: new { @class = "navbar-brand" })
+        <br />
+        @Html.ActionLink(linkText: "Create New Role", actionName: "Create", controllerName: "Roles", routeValues: new { Area = "LearningModelArea" }, htmlAttributes: new { @class = "navbar-brand" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Functions
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IsActive)
+                    </th>
+
+                </tr>
+            </thead>
+            @{
+                var Index = 0;
+                foreach (var item in Model)
+                {
+                    ++Index;
+                        <tr>
+                            <td>
+                                @(Index)
+                            </td>
+                            <td>
+                                @Html.ActionLink(linkText: "Details", actionName: "Details", controllerName: "Roles", routeValues: new { Area = "LearningModelArea",Id=item.Id }, htmlAttributes: new { @class = "navbar-brand" }) |
+                                @Html.ActionLink(linkText: "Edit", actionName: "Edit", controllerName: "Roles", routeValues: new { Area = "LearningModelArea", Id = item.Id }, htmlAttributes: new { @class = "navbar-brand" })  |
+                                @Html.ActionLink(linkText: "Delete", actionName: "Delete", controllerName: "Roles", routeValues: new { Area = "LearningModelArea" , Id = item.Id }, htmlAttributes: new { @class = "navbar-brand" })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsActive)
+                            </td>
+
+                        </tr>
+                }
+            }
+        </table>
+    </div>
+</div>

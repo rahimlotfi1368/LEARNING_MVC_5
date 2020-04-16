@@ -1,0 +1,59 @@
+﻿@model ViewModels.LearningHtmlHelper.CreateFormBaseOnAjaxViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateFormBaseOnAjax</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div id="id1">
+
+    </div>
+    <h3><b>Forms - Strongly Typed AJAX (Asynchronous)</b></h3>
+    <hr />
+    @using (Ajax.BeginForm(actionName: "CreateFormBaseOnAjax", controllerName: "LearningHtmlHelper", ajaxOptions: new AjaxOptions
+    {
+
+        HttpMethod = "POST",
+        UpdateTargetId = "id1",
+        LoadingElementId = "LoadingImage",
+        OnSuccess = "onSuccess_Message",
+        OnFailure = "onFailure_Message",
+    }))
+    {
+        <div class="container">
+            <div class="card " style="width:500px;height:500px">
+                <h5 class="card-header">Ajax Form</h5>
+                <div class="card-body">
+                    <div class="row">
+                        @Html.LabelFor(element => element.Name) : 
+                        @Html.TextBoxFor(element => element.Name)
+                    </div>
+                    <br />
+                    <div class="row">
+                        @Html.LabelFor(element => element.Age) : 
+                        @Html.TextBoxFor(element => element.Age)
+                    </div>
+                    <br />
+                    <b>IsMarid</b>
+                    @Html.CheckBoxFor(element => element.Ismarid)
+                    <br />
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+        
+    }
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

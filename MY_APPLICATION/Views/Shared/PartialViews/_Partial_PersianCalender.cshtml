@@ -1,0 +1,15 @@
+﻿@{
+    System.DateTime now = System.DateTime.Now;
+    System.Globalization.PersianCalendar persianCalendar =
+                                            new System.Globalization.PersianCalendar();
+
+    int year = persianCalendar.GetYear(now);
+    int month = persianCalendar.GetMonth(now);
+    int day = persianCalendar.GetDayOfMonth(now);
+}
+
+<div style="color:blue;">
+    <b>
+        Time in Shamsi : @(year) / @(month) / @(day)
+    </b>
+</div>

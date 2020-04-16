@@ -1,0 +1,32 @@
+﻿@model Models.Validation.learn09
+@{
+    ViewBag.Title = "Learn09";
+    Layout = "~/Views/Shared/Layouts/_LayoutValidation.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>
+            Learn 09
+        </h4>
+
+        <hr />
+
+        @Html.ValidationSummary(true)
+
+        @Html.EditorForModel()
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(linkText: "Back to List", actionName: "Index")
+

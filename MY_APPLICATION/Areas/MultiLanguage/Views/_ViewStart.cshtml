@@ -1,0 +1,24 @@
+﻿@{
+    string cultureName =
+            System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+
+    switch (cultureName.ToUpper().Substring(startIndex:0,length:2))
+    {
+        case "FA":
+        case "AR":
+            {
+                Layout =
+                      MVC.MultiLanguage.Shared.Views.Layouts._Layout_fa_IR;
+
+                break;
+            }
+
+        default:
+            {
+                Layout =
+                    MVC.MultiLanguage.Shared.Views.Layouts._Layout;
+
+                break;
+            }
+    }
+}

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "learn03";
+    Layout = "~/Views/Shared/Layouts/_DefaultLayout.cshtml";
+}
+
+<h2>learn03</h2>
+
+@{
+    //Razor Block
+
+    string firstName = "Rahim";
+    string lastName = "Lotfi";
+    string fullName = $"{firstName} {lastName}";//این متغیر تا آخر صفحه زنده است
+    if (fullName.StartsWith("R"))
+    {
+        string mesage = "Your name start with 'R'";
+        <p class="text-info">
+            @mesage  @*تا آخر صفحه زنده نیست بلکه در همین بلاک فقط زنده است*@
+        </p>
+    }
+    else
+    {
+        <textarea>this is @(firstName).zip</textarea>
+    }
+}

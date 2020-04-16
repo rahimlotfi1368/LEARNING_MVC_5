@@ -1,0 +1,22 @@
+﻿@*@model System.Collections.Generic.IEnumerable<ViewModels.Learn06ViewModel>*@
+@model IEnumerable<ViewModels.Learn06ViewModel>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>learn06</title>
+</head>
+<body>
+    <div>
+        @foreach (var person in Model)
+        {
+            <p class="text-primary">your name is @(person.Name)</p>
+            <p class="text-primary">your age is @(person.Age)</p>
+            <p class="text-primary">your birthdate is @(person.BirthDate)</p>
+            <p class="text-primary">your car is @(person.CarModel)</p>
+            <hr />
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@model Models.Role
+@using Infrastracture
+@{
+    string title = "Delete";
+    ViewBag.Title = title;
+}
+
+<h2>
+    @(title)
+</h2>
+
+<hr />
+
+<h3>
+    Are you sure you want to delete this?
+</h3>
+
+<div class="row">
+    <div class="col-sm-3">
+        @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="col-sm-9">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        @Html.DisplayNameFor(model => model.IsActive)
+    </div>
+    <div class="col-sm-9">
+        @Html.DisplayFor(model => model.IsActive)
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    @Html.RlxButton(caption: "Delete", buttonType: Rlx.Enums.ButtonType.submit, buttonStyle: Rlx.Enums.ButtonStyle.Danger, buttonSize: Rlx.Enums.ButtonSize.Large)
+</div>
+}
+<div class="row">
+    <div class="col-xs-12">
+        
+            @Html.ActionLink(linkText: "Back To List", actionName: "Index", controllerName: "Roles", routeValues: new { Area = "LearningModelArea" }, htmlAttributes: new { @class = "navbar-brand" })  
+            |
+            @Html.ActionLink(linkText: "Edit", actionName: "Edit", controllerName: "Roles", routeValues: new { Area = "LearningModelArea", Id = Model.Id }, htmlAttributes: new { @class = "navbar-brand" })
+            |
+            @Html.ActionLink(linkText: "Details", actionName: "Details", controllerName: "Roles", routeValues: new { Area = "LearningModelArea", Id = Model.Id }, htmlAttributes: new { @class = "navbar-brand" })
+        
+    </div>
+</div>
+

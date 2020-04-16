@@ -1,0 +1,39 @@
+﻿@model ViewModels.LearningHtmlHelper.Learn01ViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>learn01</title>
+</head>
+<body>
+    @using (Html.BeginForm(actionName: "learn01", controllerName: "LearningHtmlHelper"))
+    {
+    <div class="container">
+        <div class="row">
+            @Html.Label(expression: "firstName", labelText: "First Name : ")
+            @Html.TextBox(name: "firstName")
+        </div>
+        <br />
+        <div class="row">
+            @Html.Label(expression: "lastName", labelText: "Last Name : ")
+            @Html.TextBox(name: "lastName")
+        </div>
+        <br />
+        <div class="buttons">
+            <button type="submit" class="btn btn-primary">submit</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
+        </div>
+        <br />
+        <div class="Result" style="background-color:khaki">
+            <h4>@(ViewData["Message"])</h4>
+        </div>
+    </div>
+    }
+</body>
+</html>

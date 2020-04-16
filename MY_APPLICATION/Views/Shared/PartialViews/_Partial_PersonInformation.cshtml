@@ -1,0 +1,16 @@
+﻿@model ViewModels.Learn07ViewModel
+@if (Model==null)
+{
+    <p class="text-danger">There is nothing to display</p>
+
+    return;
+}
+
+<div class="text-lg-center text-primary" style="background-color:khaki;border-color:cadetblue;">
+    <p class="text-primary">your name is @(Html.Raw(Model.Name))</p>   <!--چون نام در بکاند دارای تگ است به خاطر امنیت اعمال نمی شود برای اعمال تگ به روش زیر عمل می کنیم  @@Html.DisplayFor(model => model.Name)-->
+    <p class="text-primary">your age is @(Model.Age)</p>
+    <p class="text-primary">your birthdate is @(Model.BirthDate)</p>
+    <p class="text-primary">your car is @(Model.CarModel)</p>
+    @Html.Partial(partialViewName: MVC.Shared.Views.PartialViews._Partial_PersianCalender)
+    <hr />
+</div>

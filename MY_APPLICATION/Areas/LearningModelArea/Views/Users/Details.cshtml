@@ -1,0 +1,56 @@
+﻿@model Models.User
+
+@{
+    string title = "Details";
+    ViewBag.Title = title;
+}
+
+<h2>
+    @(title)
+</h2>
+
+<hr />
+
+<div class="row">
+    <div class="col-sm-3">
+        @Html.DisplayNameFor(model => model.Role.Name)
+    </div>
+    <div class="col-sm-9">
+        @Html.DisplayFor(model => model.Role.Name)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        @Html.DisplayNameFor(model => model.IsActive)
+    </div>
+    <div class="col-sm-9">
+        @Html.DisplayFor(model => model.IsActive)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        @Html.DisplayNameFor(model => model.Username)
+    </div>
+    <div class="col-sm-9">
+        @Html.DisplayFor(model => model.Username)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        @Html.DisplayNameFor(model => model.FullName )
+    </div>
+    <div class="col-sm-9">
+        @Html.DisplayFor(model => model.FullName)
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink(linkText: "Back To List", actionName: "Index", controllerName: "Users", routeValues: new { Area = "LearningModelArea" }, htmlAttributes: new { @class = "navbar-brand" })  |
+    @Html.ActionLink(linkText: "Edit", actionName: "Edit", controllerName: "Users", routeValues: new { Area = "LearningModelArea", Id = Model.Id }, htmlAttributes: new { @class = "navbar-brand" })  |
+    @Html.ActionLink(linkText: "Delete", actionName: "Delete", controllerName: "Users", routeValues: new { Area = "LearningModelArea", Id = Model.Id }, htmlAttributes: new { @class = "navbar-brand" })
+</p>
+
+

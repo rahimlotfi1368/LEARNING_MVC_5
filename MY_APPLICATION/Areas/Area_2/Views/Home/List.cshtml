@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h5 class="text-primary">This is List view in HomeController in Area_2</h5>
+
+<div class="container">
+    @Html.ActionLink(linkText: "Go to Index in LearningArea controller in Root", actionName: "Index", controllerName: "LearningArea", routeValues: new { Area = "" }, htmlAttributes: new { @class = "navbar-brand" })
+    |
+    @Html.ActionLink(linkText: "Go to Help in LearningArea controller in Root", actionName: "Help", controllerName: "LearningArea", routeValues: new { Area = "" }, htmlAttributes: new { @class = "navbar-brand" })
+    |
+    @Html.ActionLink(linkText: "Go to List in User controller in Area_1", actionName: "List", controllerName: "User", routeValues: new { Area = "Area_1" }, htmlAttributes: new { @class = "navbar-brand" })
+</div>
+

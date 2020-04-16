@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    @RenderSection(name:"StyleSection",required:false)<!--اگر سگنیچر دوم این تابع را ننویسیم در صورت تعریف نکردن قسمت مربوطه در ویو با ارور موقع اجرا مواجح می شویم-->
+</head>
+<body>
+    <div class="container body-content">
+
+        @RenderBody()
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @if (IsSectionDefined(name: "ScriptSection"))
+    {
+        @RenderSection(name: "ScriptSection")
+        @*@RenderSection(name: "ScriptSection", required: false)*@
+    }
+    else
+    {
+        <a href="~/Other/Login">Login</a>
+    }
+
+
+</body>
+</html>

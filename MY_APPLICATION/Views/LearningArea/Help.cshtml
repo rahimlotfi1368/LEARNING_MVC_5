@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Help</title>
+</head>
+<body>
+    <div class="container">
+        <h6>Help Action in learningArea controller in Root</h6>
+        @Html.ActionLink(linkText: "Go to list in user controller in Area_1", actionName: "List", controllerName: "User", routeValues: new { Area = "Area_1" }, htmlAttributes: new { @class = "navbar-brand" })
+        |
+        @Html.ActionLink(linkText: "Go to list in Home controller in Area_2", actionName: "List", controllerName: "Home", routeValues: new { Area = "Area_2" }, htmlAttributes: new { @class = "navbar-brand" })
+    </div>
+</body>
+</html>

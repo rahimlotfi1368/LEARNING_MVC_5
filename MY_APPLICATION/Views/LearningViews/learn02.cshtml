@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "learn02";
+    Layout = "~/Views/Shared/Layouts/_DefaultLayout.cshtml";
+}
+
+<h2>learn02</h2>
+@for (int index = 0; index < 10; index++)
+{
+    <!--کامنت اچ تی ام ال به کلاینت ارسال می شود-->
+    @*index  کامنت سی شارپی به کلاینت ارسال نمی شود*@
+
+    <h2 class="text-capitalize text-primary">
+        hello world (@index)
+    </h2>
+}

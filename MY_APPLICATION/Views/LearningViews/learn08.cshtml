@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "learn08";
+    Layout = "~/Views/Shared/Layouts/_Layout01.cshtml";
+}
+
+<h2>learn08</h2>
+<p id="app" class="text-danger">
+    <b>{{ message }}</b>
+    <br />
+    <button class="btn btn-light" v-on:click="sayHello()">
+        Say Hello!
+    </button>
+</p>
+
+@section StyleSection
+{
+    <style>
+        p {
+            color: steelblue;
+        }
+    </style>
+}
+
+@section ScriptSection
+{
+    <script src="~/Scripts/vue.js"></script>
+    <script>
+
+        const app = new Vue({
+
+            el: `#app`,
+
+            data: {
+
+                message:null,
+
+            },
+
+            methods: {
+
+                sayHello: function () {
+
+                    if (this.message == null) {
+
+                        this.message="Hello,World!"
+
+                    }
+                    else {
+
+                        this.message=null
+
+                    }
+
+                },
+
+            },
+        })
+
+    </script>
+}

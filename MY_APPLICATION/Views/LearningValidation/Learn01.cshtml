@@ -1,0 +1,46 @@
+﻿@model Models.Validation.Learn01
+@{
+    ViewBag.Title = "Learn01";
+    Layout = "~/Views/Shared/Layouts/_LayoutValidation.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>
+            Learn 1
+        </h4>
+
+        <hr />
+
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Age, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Age)
+                @Html.ValidationMessageFor(model => model.Age)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FullName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FullName)
+                @Html.ValidationMessageFor(model => model.FullName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.RlxButton(caption:"Create",buttonType:Rlx.Enums.ButtonType.submit,buttonStyle:Rlx.Enums.ButtonStyle.Primary,buttonSize:Rlx.Enums.ButtonSize.Large)
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(linkText:"Back to List",actionName:"Index")
+</div>

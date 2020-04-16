@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ViewModels.Learn07ViewModel>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>learn07</title>
+</head>
+<body>
+    <div>
+        @foreach (var person in Model)
+        {
+            @Html.Partial(partialViewName: MVC.Shared.Views.PartialViews._Partial_PersonInformation, model: person)
+
+           // @Html.Partial(partialViewName: MVC.Shared.Views.PartialViews._Partial_PersonInformation_template, model: person)
+        }
+    </div>
+</body>
+</html>
