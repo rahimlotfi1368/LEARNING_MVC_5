@@ -37,6 +37,8 @@ public static partial class MVC
     public static LearningModelAreaClass LearningModelArea { get { return s_LearningModelArea; } }
     static readonly MultiLanguageClass s_MultiLanguage = new MultiLanguageClass();
     public static MultiLanguageClass MultiLanguage { get { return s_MultiLanguage; } }
+    static readonly SimpleSecurityClass s_SimpleSecurity = new SimpleSecurityClass();
+    public static SimpleSecurityClass SimpleSecurity { get { return s_SimpleSecurity; } }
     public static MY_APPLICATION.Controllers.HomeController Home = new MY_APPLICATION.Controllers.T4MVC_HomeController();
     public static MY_APPLICATION.Controllers.LearningAreaController LearningArea = new MY_APPLICATION.Controllers.T4MVC_LearningAreaController();
     public static MY_APPLICATION.Controllers.LearningHtmlHelperController LearningHtmlHelper = new MY_APPLICATION.Controllers.T4MVC_LearningHtmlHelperController();
@@ -84,6 +86,14 @@ namespace T4MVC
         public readonly string Name = "MultiLanguage";
         public MY_APPLICATION.Areas.MultiLanguage.Controllers.HomeController Home = new MY_APPLICATION.Areas.MultiLanguage.Controllers.T4MVC_HomeController();
         public T4MVC.MultiLanguage.SharedController Shared = new T4MVC.MultiLanguage.SharedController();
+    }
+    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+    public class SimpleSecurityClass
+    {
+        public readonly string Name = "SimpleSecurity";
+        public MY_APPLICATION.Areas.SimpleSecurity.Controllers.AccountController Account = new MY_APPLICATION.Areas.SimpleSecurity.Controllers.T4MVC_AccountController();
+        public MY_APPLICATION.Areas.SimpleSecurity.Controllers.HomeController Home = new MY_APPLICATION.Areas.SimpleSecurity.Controllers.T4MVC_HomeController();
+        public T4MVC.SimpleSecurity.SharedController Shared = new T4MVC.SimpleSecurity.SharedController();
     }
 }
 

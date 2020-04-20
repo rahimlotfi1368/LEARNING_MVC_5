@@ -252,6 +252,14 @@
     <Content Include="BS4-RTL-Samples\assets\bootstrap-outline.svg" />
     <Content Include="Areas\MultiLanguage\Views\Shared\Layouts\_Layout.fa-IR.cshtml" />
     <Content Include="Areas\MultiLanguage\Views\Home\Create.cshtml" />
+    <Content Include="Areas\SimpleSecurity\Views\web.config" />
+    <Content Include="Areas\SimpleSecurity\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\SimpleSecurity\Views\Home\Index.cshtml" />
+    <Content Include="Areas\SimpleSecurity\Views\Shared\Layouts\_Default.cshtml" />
+    <Content Include="Areas\SimpleSecurity\Views\Home\Action1.cshtml" />
+    <Content Include="Areas\SimpleSecurity\Views\Home\Action2.cshtml" />
+    <Content Include="Areas\SimpleSecurity\Views\Home\Action3.cshtml" />
+    <Content Include="Areas\SimpleSecurity\Views\Account\Login.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -369,6 +377,9 @@
     <Compile Include="Areas\LearningModelArea\LearningModelAreaAreaRegistration.cs" />
     <Compile Include="Areas\MultiLanguage\Controllers\HomeController.cs" />
     <Compile Include="Areas\MultiLanguage\MultiLanguageAreaRegistration.cs" />
+    <Compile Include="Areas\SimpleSecurity\Controllers\AccountController.cs" />
+    <Compile Include="Areas\SimpleSecurity\Controllers\HomeController.cs" />
+    <Compile Include="Areas\SimpleSecurity\SimpleSecurityAreaRegistration.cs" />
     <Compile Include="Area_1.SharedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -403,7 +414,10 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastracture\BaseController.cs" />
+    <Compile Include="Infrastracture\Convert.cs" />
+    <Compile Include="Infrastracture\CustomHtmlHelper.cs" />
     <Compile Include="Infrastracture\HtmlHelper.cs" />
+    <Compile Include="Infrastracture\RoleProvider.cs" />
     <Compile Include="LearningAreaController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -436,6 +450,15 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleSecurity.AccountController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleSecurity.HomeController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleSecurity.SharedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="T4MVC.cs">

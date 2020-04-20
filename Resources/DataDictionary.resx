@@ -123,6 +123,9 @@
   <data name="ConfirmPassword" xml:space="preserve">
     <value>ConfirmPassword Value</value>
   </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Description Value</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password Value</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>Percent</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Username Value</value>

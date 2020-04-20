@@ -86,5 +86,32 @@ namespace Resources {
                 return ResourceManager.GetString("RequiredFieldValidator", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You did not specify {0}!.
+        /// </summary>
+        public static string RequiredValidationErrorMessage {
+            get {
+                return ResourceManager.GetString("RequiredValidationErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Can Select an Item.
+        /// </summary>
+        public static string YouCanSelectAnItem {
+            get {
+                return ResourceManager.GetString("YouCanSelectAnItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Should Select an Item.
+        /// </summary>
+        public static string YouShouldSelectAnItem {
+            get {
+                return ResourceManager.GetString("YouShouldSelectAnItem", resourceCulture);
+            }
+        }
     }
 }

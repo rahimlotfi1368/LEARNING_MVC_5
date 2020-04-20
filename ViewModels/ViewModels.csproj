@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\LoginViewModel.cs" />
     <Compile Include="LearningHtmlHelper\CreateFormBaseOnAjaxViewModel.cs" />
     <Compile Include="LearningHtmlHelper\Learn01ViewModel.cs" />
     <Compile Include="LearningHtmlHelper\Learn03ViewModel.cs" />

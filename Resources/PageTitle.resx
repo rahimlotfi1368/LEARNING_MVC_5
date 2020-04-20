@@ -123,4 +123,7 @@
   <data name="Learn11" xml:space="preserve">
     <value>learn 11</value>
   </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
 </root>
